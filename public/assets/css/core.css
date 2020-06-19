@@ -1,3 +1,4 @@
-/* Core Css for the page */
+/* Core Css for pages */
 
 @import "reset.css";
+@import "variables.css";
