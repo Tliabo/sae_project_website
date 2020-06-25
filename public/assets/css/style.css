@@ -23,8 +23,7 @@ body {
   flex-wrap: wrap;
 }
 #header-main-title {
-  position: relative;
-  left: 1rem;
+  margin-left: 1rem;
 }
 #header-main #nav-main {
   width: 50%;
@@ -140,22 +139,28 @@ main .galerie-wrapper .technik .images .image > a {
 main .paintings-list .painting-wrapper {
   display: flex;
   margin-bottom: 4rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 main .paintings-list .painting-wrapper img {
-  max-width: 500px;
+  width: 30%;
+  box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
 }
 main .paintings-list .painting-wrapper .painting-details {
   display: flex;
   flex-direction: column;
-  margin: 0 2rem;
+  margin-left: 2rem;
+  width: 65%;
   box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
+}
+main .paintings-list .painting-wrapper .painting-details tbody {
   padding: 2rem;
 }
-main .paintings-list .painting-wrapper .painting-details tr > td:first-child {
+main .paintings-list .painting-wrapper .painting-details tbody tr > td:first-child {
   padding-right: 1rem;
   vertical-align: top;
 }
-main .paintings-list .painting-wrapper .painting-details tr > td:last-child {
+main .paintings-list .painting-wrapper .painting-details tbody tr > td:last-child {
   padding-bottom: 1rem;
 }
 main .biografie-wrapper {
@@ -186,16 +191,15 @@ main .biografie-wrapper .biografie-text-wrapper p {
 #footer-main #copyright {
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 #footer-main #contact {
-  left: 1rem;
+  margin-left: 1rem;
 }
 #footer-main #contact .name {
   margin-bottom: 0.5rem;
 }
 #footer-main #copyright {
-  right: 1rem;
+  margin-right: 1rem;
   align-items: center;
 }
 /*# sourceMappingURL=style.css.map */

@@ -19,8 +19,7 @@ body {
     flex-wrap: wrap;
 
     &-title {
-        position: relative;
-        left: 1rem;
+        margin-left: 1rem;
     }
 
 
@@ -173,33 +172,40 @@ main {
         .painting-wrapper {
             display: flex;
             margin-bottom: 4rem;
+            justify-content: space-between;
+            flex-wrap: wrap;
 
             img {
-                max-width: 500px;
+                width: 30%;
+                box-shadow: @box-shadow-default;
             }
 
             .painting-details {
                 display: flex;
                 flex-direction: column;
-                margin: 0 2rem;
+                margin-left: 2rem;
+                width: 65%;
                 box-shadow: @box-shadow-default;
-                padding: 2rem;
 
-                tr {
-                    > td:first-child {
-                        padding-right: 1rem;
-                        vertical-align: top;
-                    }
+                tbody{
 
-                    > td:last-child {
-                        padding-bottom: 1rem;
+                    padding: 2rem;
+
+                    tr {
+                        > td:first-child {
+                            padding-right: 1rem;
+                            vertical-align: top;
+                        }
+
+                        > td:last-child {
+                            padding-bottom: 1rem;
+                        }
                     }
                 }
             }
         }
     }
     //Galerie - end
-
     //Biografie - start
     .biografie-wrapper {
         display: flex;
@@ -226,7 +232,6 @@ main {
     }
     //Biografie - end
 }
-
 // Main and Content - end
 
 // Footer and Content - start
@@ -242,11 +247,10 @@ main {
     #contact, #copyright {
         display: flex;
         flex-direction: column;
-        position: relative;
     }
 
     #contact {
-        left: 1rem;
+        margin-left: 1rem;
 
         .name {
             margin-bottom: 0.5rem;
@@ -254,7 +258,7 @@ main {
     }
 
     #copyright {
-        right: 1rem;
+        margin-right: 1rem;
         align-items: center;
     }
 }
