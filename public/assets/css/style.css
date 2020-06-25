@@ -23,23 +23,23 @@ body {
   position: relative;
   left: 1rem;
 }
-#nav-main {
+#header-main #nav-main {
   width: 50%;
 }
-#nav-main > ul {
+#header-main #nav-main > ul {
   display: flex;
   justify-content: space-around;
   color: var(--color-light);
 }
-#nav-main > ul > li {
+#header-main #nav-main > ul > li {
   background: var(--bg-dark);
   margin: 0.5rem;
 }
-#nav-main > ul > li:hover,
-#nav-main > ul > li.active {
+#header-main #nav-main > ul > li:hover,
+#header-main #nav-main > ul > li.active {
   background: var(--bg-dark-lighten);
 }
-#nav-main > ul > li > a {
+#header-main #nav-main > ul > li > a {
   display: block;
   padding: 0.5rem 1rem;
 }
@@ -69,6 +69,79 @@ body {
 main {
   background: var(--bg-gray);
   min-height: 80vh;
+  padding: 2rem;
+}
+main h2 {
+  padding-bottom: 1rem;
+}
+main .event {
+  display: flex;
+  margin-bottom: 2rem;
+}
+main .event img {
+  max-width: 500px;
+}
+main .event .event-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+  padding: 1rem;
+  box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
+  min-width: 50%;
+}
+main .event .event-details-wrapper h3 {
+  margin-bottom: 0.5rem;
+}
+main .event .event-details-wrapper h4 {
+  margin: 2rem 0 0.5rem 0;
+}
+main .galerie-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+main .galerie-wrapper .technik {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+}
+main .galerie-wrapper .technik h3 {
+  margin-bottom: 2rem;
+}
+main .galerie-wrapper .technik .images {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+main .galerie-wrapper .technik .images .image > a {
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
+}
+main .paintings-list .painting-wrapper {
+  display: flex;
+}
+main .paintings-list .painting-wrapper img {
+  max-width: 500px;
+}
+main .paintings-list .painting-wrapper .painting-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+  box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+}
+main .paintings-list .painting-wrapper .painting-details tr > td:first-child {
+  padding-right: 1rem;
+  vertical-align: top;
+}
+main .paintings-list .painting-wrapper .painting-details tr > td:last-child {
+  padding-bottom: 1rem;
 }
 #footer-main {
   min-height: 10vh;
@@ -79,19 +152,19 @@ main {
   align-items: center;
   padding: 1rem;
 }
-#contact,
-#copyright {
+#footer-main #contact,
+#footer-main #copyright {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-#contact {
+#footer-main #contact {
   left: 1rem;
 }
-#contact .name {
+#footer-main #contact .name {
   margin-bottom: 0.5rem;
 }
-#copyright {
+#footer-main #copyright {
   right: 1rem;
   align-items: center;
 }

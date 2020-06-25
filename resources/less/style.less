@@ -13,32 +13,33 @@ body {
     min-height: 10vh;
     padding: 1rem;
     flex-wrap: wrap;
-}
 
-#header-main-title {
-    position: relative;
-    left: 1rem;
-}
+    &-title {
+        position: relative;
+        left: 1rem;
+    }
 
-#nav-main {
-    width: 50%;
 
-    > ul {
-        display: flex;
-        justify-content: space-around;
-        color: @color-light;
+    #nav-main {
+        width: 50%;
 
-        > li {
-            background: @bg-dark;
-            margin: 0.5rem;
+        > ul {
+            display: flex;
+            justify-content: space-around;
+            color: @color-light;
 
-            &:hover, &.active {
-                background: @bg-dark-lighten;
-            }
+            > li {
+                background: @bg-dark;
+                margin: 0.5rem;
 
-            > a {
-                display: block;
-                padding: 0.5rem 1rem;
+                &:hover, &.active {
+                    background: @bg-dark-lighten;
+                }
+
+                > a {
+                    display: block;
+                    padding: 0.5rem 1rem;
+                }
             }
         }
     }
@@ -75,13 +76,118 @@ body {
         }
     }
 }
+
 // Header and Content - end
 
 // Main and Content - start
 main {
     background: @bg-gray;
     min-height: 80vh;
+    padding: 2rem;
+
+    h2 {
+        padding-bottom: 1rem;
+    }
+
+    //Aktuell - start
+    .event {
+        display: flex;
+        margin-bottom: 2rem;
+
+
+        img {
+            max-width: 500px;
+        }
+
+        .event-details-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin: 0 2rem;
+            padding: 1rem;
+            box-shadow: @box-shadow-default;
+            min-width: 50%;
+
+            h3 {
+                margin-bottom: 0.5rem;
+            }
+
+            h4 {
+                margin: 2rem 0 0.5rem 0;
+            }
+        }
+    }
+
+    //Aktuell - end
+    //Galerie - start
+    .galerie-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .technik {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: @box-shadow-default;
+            padding: 2rem;
+
+            h3 {
+                margin-bottom: 2rem;
+            }
+
+            .images {
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+
+                .image {
+
+                    > a {
+                        display: block;
+                        width: 150px;
+                        height: 150px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        box-shadow: @box-shadow-default;
+                    }
+                }
+            }
+        }
+    }
+
+    .paintings-list {
+
+        .painting-wrapper {
+            display: flex;
+
+            img {
+                max-width: 500px;
+            }
+
+            .painting-details {
+                display: flex;
+                flex-direction: column;
+                margin: 0 2rem;
+                box-shadow: @box-shadow-default;
+                padding: 2rem;
+
+                tr {
+                    > td:first-child {
+                        padding-right: 1rem;
+                        vertical-align: top;
+                    }
+
+                    > td:last-child {
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    //Galerie - end
 }
+
 // Main and Content - end
 
 // Footer and Content - start
@@ -93,24 +199,25 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-}
 
-#contact, #copyright {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
+    #contact, #copyright {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
 
-#contact {
-    left: 1rem;
+    #contact {
+        left: 1rem;
 
-    .name {
-        margin-bottom: 0.5rem;
+        .name {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    #copyright {
+        right: 1rem;
+        align-items: center;
     }
 }
 
-#copyright {
-    right: 1rem;
-    align-items: center;
-}
 // Footer and Content - end
