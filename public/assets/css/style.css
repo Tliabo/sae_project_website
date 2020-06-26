@@ -1,14 +1,12 @@
-/* Basic Color scheme */
-:root {
-  --color-light: #FFE3E3;
-  --bg-pink: #E1A6AD;
-  --bg-dark: #946E72;
-  --bg-dark-lighten: #aa8b8f;
-  --bg-gray: #E1E1E1;
-  --color-dark: #333333;
-}
 body {
   color: var(--color-dark);
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-family: 'Neucha', cursive;
+}
+h2 {
+  font-family: 'Kaushan Script', cursive;
 }
 .hidden {
   display: none;
@@ -51,10 +49,10 @@ body {
   bottom: 11vh;
   display: none;
 }
-.dropdown {
+nav .dropdown {
   position: relative;
 }
-.dropdown .dropdown-menu {
+nav .dropdown .dropdown-menu {
   position: absolute;
   display: none;
   z-index: 1000;
@@ -63,15 +61,15 @@ body {
   left: 0;
   background: var(--bg-dark);
 }
-.dropdown .dropdown-menu > li:hover,
-.dropdown .dropdown-menu > li.active {
+nav .dropdown .dropdown-menu > li:hover,
+nav .dropdown .dropdown-menu > li.active {
   background: var(--bg-dark-lighten);
 }
-.dropdown .dropdown-menu > li > a {
+nav .dropdown .dropdown-menu > li > a {
   display: block;
   padding: 0.5rem 1rem;
 }
-.dropdown:hover .dropdown-menu {
+nav .dropdown:hover .dropdown-menu {
   display: flex;
 }
 main {
@@ -111,19 +109,21 @@ main .galerie-wrapper .technik {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 24px 32px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04), 0 16px 24px rgba(0, 0, 0, 0.04), 0 24px 32px rgba(0, 0, 0, 0.04);
   padding: 2rem;
   margin-bottom: 4rem;
 }
 main .galerie-wrapper .technik h3 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 main .galerie-wrapper .technik .images {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 100%;
 }
 main .galerie-wrapper .technik .images .image {
+  margin-top: 1rem;
   width: 150px;
   height: 150px;
 }
@@ -142,29 +142,33 @@ main .paintings-list .painting-wrapper {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-main .paintings-list .painting-wrapper img {
-  width: 30%;
+main .paintings-list .painting-wrapper .painting-image {
   box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
+  width: 30%;
+  margin-right: 2rem;
 }
 main .paintings-list .painting-wrapper .painting-details {
   display: flex;
   flex-direction: column;
-  margin-left: 2rem;
-  width: 65%;
+  justify-content: space-between;
   box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
-}
-main .paintings-list .painting-wrapper .painting-details tbody {
   padding: 2rem;
+  width: calc(70% - 2rem);
 }
-main .paintings-list .painting-wrapper .painting-details tbody tr > td:first-child {
-  padding-right: 1rem;
-  vertical-align: top;
+main .paintings-list .painting-wrapper .painting-details .row {
+  display: flex;
+  margin-bottom: 1rem;
 }
-main .paintings-list .painting-wrapper .painting-details tbody tr > td:last-child {
-  padding-bottom: 1rem;
+main .paintings-list .painting-wrapper .painting-details .row > p:first-child {
+  width: 105px;
+  margin-right: 1rem;
+}
+main .paintings-list .painting-wrapper .painting-details .row.painting-description p:last-child {
+  width: 70%;
 }
 main .biografie-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 main .biografie-wrapper #portrait img {

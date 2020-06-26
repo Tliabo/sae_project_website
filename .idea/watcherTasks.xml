@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectTasksOptions">
     <TaskOptions isEnabled="true">
-      <option name="arguments" value="$FileName$ ../../public/assets/css/$FileNameWithoutExtension$.css --source-map" />
+      <option name="arguments" value="$FileName$ --autoprefix ../../public/assets/css/$FileNameWithoutExtension$.css --source-map" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
       <option name="exitCodeBehavior" value="ERROR" />
