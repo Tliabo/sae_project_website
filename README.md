@@ -7,7 +7,8 @@ Die Website soll in Zukunft dann mit PHP und evtl. Javascript erweitert werden, 
 Ich erstelle diese Webseite für meine Mutter und ihre Kunst. Das Ziel ist, dass sie ihre Kunst Online stellen und somit mit anderen Personen Teilen kann, es soll möglich sein, sie zu Kontaktieren für allenfalls Interesenten um Gemälde zu erwerben.
 
 **Abgabe**
-30. Juni 2020
+
+**30. Juni 2020**
 
 ## Ziele für die Zukunft
 - Seiten Dynamisch machen
