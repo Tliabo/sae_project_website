@@ -20,6 +20,9 @@ h2 {
   padding: 1rem;
   flex-wrap: wrap;
 }
+#header-main .fa-bars {
+  display: none;
+}
 #header-main-title {
   margin-left: 1rem;
 }
@@ -28,6 +31,7 @@ h2 {
 }
 #header-main #nav-main > ul {
   display: flex;
+  width: 100%;
   justify-content: space-around;
   color: var(--color-light);
 }
@@ -49,6 +53,14 @@ h2 {
   right: 2rem;
   bottom: 11vh;
   display: none;
+}
+@media all and (max-width: 600px) {
+  #header-main {
+    flex-direction: column;
+  }
+  #header-main #nav-main {
+    width: 100%;
+  }
 }
 nav .dropdown {
   position: relative;
@@ -83,7 +95,7 @@ main h2 {
   margin-bottom: 1rem;
 }
 main #frontpage {
-  width: 50%;
+  width: 100%;
   height: 50vh;
   margin: auto;
 }
@@ -95,6 +107,11 @@ main #frontpage > .image {
   background-position: center;
   background-size: cover;
   box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
+}
+@media all and (min-width: 900px) {
+  main #frontpage {
+    width: 50%;
+  }
 }
 main .event {
   display: flex;

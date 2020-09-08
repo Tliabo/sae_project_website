@@ -28,16 +28,20 @@ h2 {
     padding: 1rem;
     flex-wrap: wrap;
 
+    .fa-bars {
+        display: none;
+    }
+
     &-title {
         margin-left: 1rem;
     }
-
 
     #nav-main {
         width: 50%;
 
         > ul {
             display: flex;
+            width: 100%;
             justify-content: space-around;
             color: @color-light;
 
@@ -62,6 +66,14 @@ h2 {
             right: 2rem;
             bottom: 11vh;
             display: none;
+        }
+    }
+
+    @media all and (max-width: 600px) {
+        flex-direction: column;
+
+        #nav-main {
+            width: 100%;
         }
     }
 }
@@ -112,7 +124,7 @@ main {
     }
 
     #frontpage {
-        width: 50%;
+        width: 100%;
         height: 50vh;
         margin: auto;
 
@@ -124,6 +136,10 @@ main {
             background-position: center;
             background-size: cover;
             box-shadow: @box-shadow-default;
+        }
+
+        @media all and (min-width: 900px) {
+            width: 50%;
         }
     }
 
