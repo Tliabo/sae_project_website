@@ -24,21 +24,21 @@ ul {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Neucha'), url(https://fonts.gstatic.com/s/neucha/v11/q5uGsou0JOdh94bvug.ttf) format('truetype');
+  src: local('Neucha'), url(https://fonts.gstatic.com/s/neucha/v12/q5uGsou0JOdh94bvug.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Kaushan Script';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Kaushan Script'), local('KaushanScript-Regular'), url(https://fonts.gstatic.com/s/kaushanscript/v8/vm8vdRfvXFLG3OLnsO15WYS5DF7_.ttf) format('truetype');
+  src: local('Kaushan Script'), local('KaushanScript-Regular'), url(https://fonts.gstatic.com/s/kaushanscript/v9/vm8vdRfvXFLG3OLnsO15WYS5DF7_.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Rock Salt';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Rock Salt Regular'), local('RockSalt-Regular'), url(https://fonts.gstatic.com/s/rocksalt/v10/MwQ0bhv11fWD6QsAVOZbsA.ttf) format('truetype');
+  src: local('Rock Salt Regular'), local('RockSalt-Regular'), url(https://fonts.gstatic.com/s/rocksalt/v11/MwQ0bhv11fWD6QsAVOZbsA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
@@ -60,50 +60,8 @@ ul {
   max-width: 100%;
   height: auto;
 }
-.slider {
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 300px;
-}
-.slider .slider-inner {
-  display: flex;
-  overflow: hidden;
-  position: relative;
-}
-.slider .slider-inner .slider-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 100%;
-  position: relative;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-}
-.slider .slider-inner .caption {
-  position: absolute;
-  bottom: 3rem;
-  background: #f3f3f352;
-  padding: 0.5rem;
-  border-radius: 1px;
-}
-.slider .slider-control {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 12.5%;
-  height: 100%;
-}
-.slider .slider-control:hover {
-  background: #BFBFBF40;
-}
-.slider .slider-control.prev {
-  left: 0;
-}
-.slider .slider-control.next {
-  right: 0;
+.hidden {
+  display: none;
 }
 body {
   color: var(--color-dark);
@@ -114,9 +72,6 @@ h1 {
 }
 h2 {
   font-family: 'Kaushan Script', cursive;
-}
-.hidden {
-  display: none;
 }
 #header-main {
   display: flex;
@@ -133,21 +88,22 @@ h2 {
 #header-main #nav-main {
   width: 50%;
 }
-#header-main #nav-main > ul {
+#header-main #nav-main .nav-menu {
   display: flex;
+  width: 100%;
   justify-content: space-around;
   color: var(--color-light);
 }
-#header-main #nav-main > ul > li {
+#header-main #nav-main .nav-menu .nav-item {
   background: var(--bg-dark);
   margin: 0.5rem;
   box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
 }
-#header-main #nav-main > ul > li:hover,
-#header-main #nav-main > ul > li.active {
+#header-main #nav-main .nav-menu .nav-item:hover,
+#header-main #nav-main .nav-menu .nav-item.active {
   background: var(--bg-dark-lighten);
 }
-#header-main #nav-main > ul > li > a {
+#header-main #nav-main .nav-menu .nav-item .nav-link {
   display: block;
   padding: 0.5rem 1rem;
 }
@@ -156,6 +112,14 @@ h2 {
   right: 2rem;
   bottom: 11vh;
   display: none;
+}
+@media all and (max-width: 600px) {
+  #header-main {
+    flex-direction: column;
+  }
+  #header-main #nav-main {
+    width: 100%;
+  }
 }
 nav .dropdown {
   position: relative;
@@ -190,7 +154,7 @@ main h2 {
   margin-bottom: 1rem;
 }
 main #frontpage {
-  width: 50%;
+  width: 100%;
   height: 50vh;
   margin: auto;
 }
@@ -202,6 +166,11 @@ main #frontpage > .image {
   background-position: center;
   background-size: cover;
   box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
+}
+@media all and (min-width: 900px) {
+  main #frontpage {
+    width: 50%;
+  }
 }
 main .event {
   display: flex;
@@ -328,5 +297,50 @@ main .biografie-wrapper .biografie-text-wrapper p {
 #footer-main #copyright {
   margin-right: 1rem;
   align-items: center;
+}
+.slider {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.slider .slider-inner {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.slider .slider-inner .slider-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  position: relative;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+.slider .slider-inner .caption {
+  position: absolute;
+  bottom: 3rem;
+  background: #f3f3f352;
+  padding: 0.5rem;
+  border-radius: 1px;
+}
+.slider .slider-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 12.5%;
+  height: 100%;
+}
+.slider .slider-control:hover {
+  background: #BFBFBF40;
+}
+.slider .slider-control.prev {
+  left: 0;
+}
+.slider .slider-control.next {
+  right: 0;
 }
 /*# sourceMappingURL=core.css.map */

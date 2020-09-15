@@ -1,5 +1,5 @@
-@import (reference) "variables";
 @import (reference) "fonts";
+@import (reference) "variables";
 
 body {
     color: @color-dark;
@@ -14,10 +14,6 @@ h2 {
     font-family: 'Kaushan Script', cursive;
 }
 
-.hidden {
-    display: none;
-}
-
 // Header and Content - start
 #header-main {
     display: flex;
@@ -28,10 +24,6 @@ h2 {
     padding: 1rem;
     flex-wrap: wrap;
 
-    .fa-bars {
-        display: none;
-    }
-
     &-title {
         margin-left: 1rem;
     }
@@ -39,13 +31,13 @@ h2 {
     #nav-main {
         width: 50%;
 
-        > ul {
+        .nav-menu {
             display: flex;
             width: 100%;
             justify-content: space-around;
             color: @color-light;
 
-            > li {
+            .nav-item {
                 background: @bg-dark;
                 margin: 0.5rem;
                 box-shadow: @box-shadow-default;
@@ -54,7 +46,7 @@ h2 {
                     background: @bg-dark-lighten;
                 }
 
-                > a {
+                .nav-link {
                     display: block;
                     padding: 0.5rem 1rem;
                 }
@@ -317,3 +309,5 @@ main {
 }
 
 // Footer and Content - end
+
+@import "slider";
