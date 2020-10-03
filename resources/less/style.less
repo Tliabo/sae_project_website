@@ -202,15 +202,16 @@ main {
     .paintings-list {
 
         .painting-wrapper {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
             margin-bottom: 4rem;
-            justify-content: space-between;
-            flex-wrap: wrap;
 
             .painting-image {
                 box-shadow: @box-shadow-default;
-                width: 30%;
-                margin-right: 2rem;
+                max-height: 70vh;
+                width: auto;
+                justify-self: center;
             }
 
             .painting-details {
@@ -219,7 +220,6 @@ main {
                 justify-content: space-between;
                 box-shadow: @box-shadow-default;
                 padding: 2rem;
-                width: calc(70% - 2rem);
 
                 .row {
                     display: flex;
