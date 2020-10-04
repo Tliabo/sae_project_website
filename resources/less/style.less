@@ -203,38 +203,30 @@ main {
 
         .painting-wrapper {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit minmax(240px, 1fr));
+            grid-template-rows: repeat(1, 200px);
             gap: 1rem;
+            grid-auto-flow: dense;
             margin-bottom: 4rem;
 
             .painting-image {
                 box-shadow: @box-shadow-default;
-                max-height: 70vh;
-                width: auto;
-                justify-self: center;
+                max-width: 30%;
             }
 
             .painting-details {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: center;
                 box-shadow: @box-shadow-default;
                 padding: 2rem;
 
                 .row {
-                    display: flex;
+                    display: grid;
+                    grid-template-columns: 105px auto;
+                    gap: 1rem;
                     margin-bottom: 1rem;
 
-                    > p:first-child {
-                        width: 105px;
-                        margin-right: 1rem;
-                    }
-
-                    &.painting-description {
-                        p:last-child {
-                            width: 70%;
-                        }
-                    }
                 }
             }
         }
