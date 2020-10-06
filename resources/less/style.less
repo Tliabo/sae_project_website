@@ -202,16 +202,14 @@ main {
     .paintings-list {
 
         .painting-wrapper {
-            display: grid;
-            grid-template-columns: repeat(auto-fit minmax(240px, 1fr));
-            grid-template-rows: repeat(1, 200px);
-            gap: 1rem;
-            grid-auto-flow: dense;
+            display: flex;
             margin-bottom: 4rem;
 
             .painting-image {
                 box-shadow: @box-shadow-default;
+                margin-right: 1rem;
                 max-width: 30%;
+                max-height: 50vh;
             }
 
             .painting-details {

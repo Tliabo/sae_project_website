@@ -269,16 +269,14 @@ main .galerie-wrapper .technik .images .image > a {
   box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
 }
 main .paintings-list .painting-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit minmax(240px, 1fr));
-  grid-template-rows: repeat(1, 200px);
-  gap: 1rem;
-  grid-auto-flow: dense;
+  display: flex;
   margin-bottom: 4rem;
 }
 main .paintings-list .painting-wrapper .painting-image {
   box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
+  margin-right: 1rem;
   max-width: 30%;
+  max-height: 50vh;
 }
 main .paintings-list .painting-wrapper .painting-details {
   display: flex;
