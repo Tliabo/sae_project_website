@@ -1,5 +1,6 @@
 @import (reference) "fonts";
 @import (reference) "variables";
+@import (reference) "breakpoints";
 
 body {
     color: @color-dark;
@@ -203,13 +204,14 @@ main {
 
         .painting-wrapper {
             display: flex;
+            flex-wrap: wrap;
             margin-bottom: 4rem;
 
             .painting-image {
                 box-shadow: @box-shadow-default;
                 margin-right: 1rem;
-                max-width: 30%;
                 max-height: 50vh;
+                align-self: center;
             }
 
             .painting-details {
@@ -218,14 +220,27 @@ main {
                 justify-content: center;
                 box-shadow: @box-shadow-default;
                 padding: 2rem;
+                width: 70%;
 
                 .row {
                     display: grid;
                     grid-template-columns: 105px auto;
                     gap: 1rem;
                     margin-bottom: 1rem;
-
                 }
+
+            }
+
+            @media all and (min-width: @min-mobile) and (max-width: @min-pc) {
+                .painting-details {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media all and (min-width: @min-mobile) and (max-width: @min-pc) {
+            .painting-wrapper {
+                flex-direction: column;
             }
         }
     }
@@ -234,24 +249,38 @@ main {
 
     //Biografie - start
     .biografie-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 1rem;
+        display: flex;
+        justify-content: space-between;
 
         #portrait {
 
+            img {
+                max-height: 80vh;
+            }
         }
 
         .biografie-text-wrapper {
             display: flex;
             flex-direction: column;
+            width: 80%;
 
             p {
                 margin: 1rem 0;
             }
         }
 
+    }
 
+    @media all and (min-width: @min-mobile) and (max-width: @min-pc) {
+        .biografie-wrapper {
+            flex-direction: column-reverse;
+            align-items: center
+        }
+
+        .event {
+            flex-direction: column;
+            align-items: center
+        }
     }
 
     //Biografie - end
