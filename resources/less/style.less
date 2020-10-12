@@ -207,9 +207,13 @@ main {
             flex-wrap: wrap;
             margin-bottom: 4rem;
 
-            .painting-image {
+            .img-wrapper {
+                width: 30%;
                 box-shadow: @box-shadow-default;
                 margin-right: 1rem;
+            }
+
+            .painting-img {
                 max-height: 50vh;
                 align-self: center;
             }
@@ -263,6 +267,7 @@ main {
             display: flex;
             flex-direction: column;
             width: 80%;
+            margin-right: 1rem;
 
             p {
                 margin: 1rem 0;
@@ -270,6 +275,8 @@ main {
         }
 
     }
+
+    //Biografie - end
 
     @media all and (min-width: @min-mobile) and (max-width: @min-pc) {
         .biografie-wrapper {
@@ -282,8 +289,6 @@ main {
             align-items: center
         }
     }
-
-    //Biografie - end
 }
 
 // Main and Content - end
