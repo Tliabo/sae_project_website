@@ -199,12 +199,12 @@ main {
     }
 
     .paintings-list {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-flow: dense;
 
         .painting-wrapper {
-            display: grid;
-            gap: 1rem;
-            grid-template-columns: repeat(auto-fit, minmax(@min-mobile, 1fr));
-            margin-bottom: 4rem;
 
             .img-wrapper {
                 display: flex;
@@ -213,12 +213,12 @@ main {
             }
 
             .painting-img {
-                max-height: 25vh;
+                max-height: 50vh;
                 box-shadow: @box-shadow-default;
             }
 
             .painting-details {
-                display: flex;
+                display: none;
                 flex-direction: column;
                 justify-content: center;
                 box-shadow: @box-shadow-default;
