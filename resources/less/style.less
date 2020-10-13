@@ -200,21 +200,35 @@ main {
 
     .paintings-list {
         display: grid;
-        gap: 1.5rem;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-rows: repeat(6, 150px);
+        gap: 1rem;
         grid-auto-flow: dense;
 
         .painting-wrapper {
-
-            .img-wrapper {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            &:nth-child(2n) {
+                grid-column: span 2;
             }
 
-            .painting-img {
-                max-height: 50vh;
-                box-shadow: @box-shadow-default;
+            &:nth-child(4n) {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+            &:nth-child(8n) {
+                grid-column: span 3;
+                grid-row: span 3;
+            }
+
+            .img-wrapper {
+                height: 100%;
+
+                .painting-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    box-shadow: @box-shadow-default;
+                }
             }
 
             .painting-details {
