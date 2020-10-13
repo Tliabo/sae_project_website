@@ -22,7 +22,7 @@
         .caption {
             position: absolute;
             bottom: 3rem;
-            background: #f3f3f352;
+            background: @bg-gray;
             padding: 0.5rem;
             border-radius: 1px;
         }
@@ -31,7 +31,7 @@
     .slider-control, .autoslide {
         font-size: 2em;
         opacity: 0;
-        color: #333333;
+        color: @color-dark;
     }
 
     .slider-control {
@@ -39,8 +39,10 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        width: 12.5%;
-        height: 100%;
+        padding: 0 6px;
+        align-self: center;
+        background: @bg-gray;
+        border-radius: 50% 50%;
 
         &.prev {
             left: 0;
@@ -56,6 +58,11 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        i {
+            border-radius: 50% 50%;
+            background: @bg-gray;
+        }
     }
 
     &:hover {

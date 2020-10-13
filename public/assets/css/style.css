@@ -99,7 +99,7 @@ main #frontpage {
   height: 50vh;
   margin: auto;
 }
-main #frontpage > .image {
+main #frontpage > .img-wrapper {
   display: block;
   width: 100%;
   height: 100%;
@@ -155,12 +155,12 @@ main .galerie-wrapper .technik .images {
   flex-wrap: wrap;
   width: 100%;
 }
-main .galerie-wrapper .technik .images .image {
+main .galerie-wrapper .technik .images .img-wrapper {
   margin-top: 1rem;
   width: 150px;
   height: 150px;
 }
-main .galerie-wrapper .technik .images .image > a {
+main .galerie-wrapper .technik .images .img-wrapper > a {
   display: block;
   width: 100%;
   height: 100%;
