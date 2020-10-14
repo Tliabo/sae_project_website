@@ -13,7 +13,8 @@ function createPlaceholder(amount = 1, keywords = ['art']) {
 
         const paintingImg = document.createElement('img');
         paintingImg.classList.add('painting-img');
-        paintingImg.src = createImageLink(keywords);
+        paintingImg.src = getImageLink(keywords);
+        paintingImg.alt = 'Random image in from unsplashed';
 
         imgWrapper.appendChild(paintingImg);
         paintingWrapper.appendChild(imgWrapper);
@@ -23,7 +24,7 @@ function createPlaceholder(amount = 1, keywords = ['art']) {
     }
 }
 
-function createImageLink(keywordsArray) {
+function getImageLink(keywordsArray) {
     let keywords = '?';
     keywordsArray.forEach(keyword => {
         keywords += `${keyword},`;

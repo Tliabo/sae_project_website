@@ -105,16 +105,15 @@ ol {
   justify-content: center;
   align-items: center;
   position: absolute;
-  padding: 0 6px;
   align-self: center;
   background: var(--bg-gray);
   border-radius: 50% 50%;
 }
 .slider .slider-control.prev {
-  left: 0;
+  left: 1rem;
 }
 .slider .slider-control.next {
-  right: 0;
+  right: 1rem;
 }
 .slider .autoslide {
   position: absolute;
@@ -337,6 +336,8 @@ main .biografie-wrapper .biografie-text-wrapper {
   flex-direction: column;
   width: 80%;
   margin-right: 1rem;
+  line-height: 1.5;
+  padding: 0 18rem;
 }
 main .biografie-wrapper .biografie-text-wrapper p {
   margin: 1rem 0;
@@ -353,7 +354,7 @@ main .biografie-wrapper .biografie-text-wrapper p {
 }
 #footer-main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   min-height: 11vh;
   padding: 1rem;
@@ -366,14 +367,10 @@ main .biografie-wrapper .biografie-text-wrapper p {
   display: flex;
   flex-direction: column;
 }
-#footer-main #contact {
-  margin-left: 1rem;
-}
 #footer-main #contact .name {
   margin-bottom: 0.5rem;
 }
 #footer-main #copyright {
-  margin-right: 1rem;
   align-items: center;
   justify-self: end;
 }
