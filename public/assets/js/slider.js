@@ -13,7 +13,6 @@ for (let i = 0; i < sliders.length; i++) {
     let sliderId = `slider-${i}`;
 
     addIdToSlider(slider, sliderId);
-    addSlideCounter(i);
     slider.setAttribute('data-slider-play', true);
     updateAutoplay(slider, sliderItems);
 
@@ -38,13 +37,6 @@ for (let i = 0; i < sliders.length; i++) {
 
 function addIdToSlider(slider, sliderId) {
     slider.id = sliderId;
-}
-
-function addSlideCounter(index) {
-    let object = {
-        slider: index,
-        activeItem: 1
-    }
 }
 
 function addSliderIdToControl(control, sliderId) {

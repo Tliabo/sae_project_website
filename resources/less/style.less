@@ -112,21 +112,6 @@ main {
     #frontpage {
         width: 100%;
         min-height: 50vh;
-        margin: auto;
-
-        > .img-wrapper {
-            display: block;
-            width: 100%;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            box-shadow: @box-shadow-default;
-        }
-
-        @media all and (min-width: 900px) {
-            width: 50%;
-        }
     }
 
     //Aktuell - start
@@ -228,25 +213,12 @@ main {
                     height: 100%;
                     object-fit: cover;
                     box-shadow: @box-shadow-default;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
-
-            .painting-details {
-                display: none;
-                flex-direction: column;
-                justify-content: center;
-                box-shadow: @box-shadow-default;
-                padding: 2rem;
-
-                .row {
-                    display: grid;
-                    grid-template-columns: 105px auto;
-                    gap: 1rem;
-                    margin-bottom: 1rem;
-                }
-
-            }
-
         }
     }
 
@@ -277,21 +249,10 @@ main {
             }
         }
 
+
     }
 
     //Biografie - end
-
-    @media all and (min-width: @min-mobile) and (max-width: @min-pc) {
-        .biografie-wrapper {
-            flex-direction: column-reverse;
-            align-items: center
-        }
-
-        .event {
-            flex-direction: column;
-            align-items: center
-        }
-    }
 }
 
 // Main and Content - end
@@ -327,3 +288,39 @@ main {
 
 // Footer and Content - end
 
+@media all and (min-width: @min-mobile) and (max-width: @min-pc) {
+    main {
+
+        .biografie-wrapper {
+
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .biografie-text-wrapper {
+                padding: 0;
+            }
+        }
+
+        .event {
+            flex-direction: column;
+            align-items: center;
+
+            .event-details-wrapper {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
+@media all and (min-width: @min-pc) {
+    main {
+        #frontpage {
+            width: 50%;
+            margin: auto;
+        }
+
+        .biografie-wrapper .biografie-text-wrapper {
+            padding: 0 9rem;
+        }
+    }
+}

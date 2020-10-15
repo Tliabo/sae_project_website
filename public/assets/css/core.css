@@ -54,6 +54,7 @@ ol {
   --bg-pink: #E1A6AD;
   --bg-dark: #946E72;
   --bg-dark-lighten: #aa8b8f;
+  --bg-dark-opac: #946E7280;
   --bg-gray: #E1E1E1;
   --color-dark: #333333;
 }
@@ -129,6 +130,70 @@ ol {
 .slider:hover .slider-control,
 .slider:hover .autoslide {
   opacity: 0.8;
+}
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-dark-opac);
+  justify-content: center;
+  align-items: center;
+}
+.modal .inner {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: var(--bg-gray);
+  overflow-y: auto;
+  max-height: 80vh;
+  max-width: 80vw;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04), 0 16px 24px rgba(0, 0, 0, 0.04), 0 24px 32px rgba(0, 0, 0, 0.04);
+}
+.modal .inner .close {
+  color: var(--color-dark);
+  align-self: flex-end;
+  font-size: 2em;
+}
+.modal .inner .close:hover,
+.modal .inner .close:focus {
+  color: var(--bg-dark-lighten);
+  cursor: pointer;
+}
+.modal .inner .content {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.modal .inner .content .img-wrapper {
+  margin-right: 1rem;
+}
+.modal .inner .content .img-wrapper .painting-img {
+  box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
+}
+.modal .inner .content .painting-details {
+  color: var(--color-dark);
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+}
+.modal .inner .content .painting-details .row {
+  display: grid;
+  grid-template-columns: 105px auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .modal .inner .content {
+    flex-wrap: wrap;
+  }
+  .modal .inner .content .img-wrapper {
+    margin: 0;
+  }
 }
 body {
   color: var(--color-dark);
@@ -215,21 +280,6 @@ main h2 {
 main #frontpage {
   width: 100%;
   min-height: 50vh;
-  margin: auto;
-}
-main #frontpage > .img-wrapper {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
-}
-@media all and (min-width: 900px) {
-  main #frontpage {
-    width: 50%;
-  }
 }
 main .event {
   display: flex;
@@ -311,18 +361,8 @@ main .paintings-list .painting-wrapper .img-wrapper .painting-img {
      object-fit: cover;
   box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
 }
-main .paintings-list .painting-wrapper .painting-details {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.026), 0 4.4px 5.3px rgba(0, 0, 0, 0.036), 0 7.9px 10px rgba(0, 0, 0, 0.041), 0 13.4px 17.9px rgba(0, 0, 0, 0.046), 0 23.9px 33.4px rgba(0, 0, 0, 0.052), 0 55px 80px rgba(0, 0, 0, 0.07);
-  padding: 2rem;
-}
-main .paintings-list .painting-wrapper .painting-details .row {
-  display: grid;
-  grid-template-columns: 105px auto;
-  gap: 1rem;
-  margin-bottom: 1rem;
+main .paintings-list .painting-wrapper .img-wrapper .painting-img:hover {
+  cursor: pointer;
 }
 main .biografie-wrapper {
   display: flex;
@@ -341,16 +381,6 @@ main .biografie-wrapper .biografie-text-wrapper {
 }
 main .biografie-wrapper .biografie-text-wrapper p {
   margin: 1rem 0;
-}
-@media all and (min-width: 480px) and (max-width: 1024px) {
-  main .biografie-wrapper {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  main .event {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 #footer-main {
   display: grid;
@@ -373,5 +403,30 @@ main .biografie-wrapper .biografie-text-wrapper p {
 #footer-main #copyright {
   align-items: center;
   justify-self: end;
+}
+@media all and (min-width: 480px) and (max-width: 1024px) {
+  main .biografie-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  main .biografie-wrapper .biografie-text-wrapper {
+    padding: 0;
+  }
+  main .event {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .event .event-details-wrapper {
+    margin-top: 0.5rem;
+  }
+}
+@media all and (min-width: 1024px) {
+  main #frontpage {
+    width: 50%;
+    margin: auto;
+  }
+  main .biografie-wrapper .biografie-text-wrapper {
+    padding: 0 9rem;
+  }
 }
 /*# sourceMappingURL=core.css.map */
