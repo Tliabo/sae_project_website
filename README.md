@@ -6,9 +6,10 @@ Die Website soll in Zukunft dann mit PHP und evtl. Javascript erweitert werden, 
 ## Für wer ist diese Webseite?
 Ich erstelle diese Webseite für meine Mutter und ihre Kunst. Das Ziel ist, dass sie ihre Kunst Online stellen und somit mit anderen Personen Teilen kann, es soll möglich sein, sie zu Kontaktieren für allenfalls Interesenten um Gemälde zu erwerben.
 
-**Abgabe**
+### Abgabe
 
-**30. Juni 2020**
+Projekt v1: 30. Juni 2020
+Projekt v2: 20. Oktober 2020
 
 ## Ziele für die Zukunft
 - Seiten Dynamisch machen
