@@ -106,7 +106,8 @@ main {
     padding: 2rem 1rem;
 
     h2 {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+        text-align: center;
     }
 
     #frontpage {
@@ -161,6 +162,11 @@ main {
                 margin-bottom: 1rem;
             }
 
+            > a {
+                display: block;
+                width: 100%;
+            }
+
             .images {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -170,7 +176,7 @@ main {
 
                 .img-wrapper {
 
-                    > a {
+                    > span[role=img] {
                         display: block;
                         width: 150px;
                         height: 150px;
