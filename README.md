@@ -8,8 +8,8 @@ Ich erstelle diese Webseite für meine Mutter und ihre Kunst. Das Ziel ist, dass
 
 ### Abgabe
 
-Projekt v1: 30. Juni 2020
-Projekt v2: 20. Oktober 2020
+- Projekt v1: 30. Juni 2020
+- Projekt v2: 20. Oktober 2020
 
 ## Ziele für die Zukunft
 - Seiten Dynamisch machen
